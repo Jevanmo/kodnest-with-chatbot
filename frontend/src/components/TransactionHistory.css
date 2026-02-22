@@ -1,0 +1,145 @@
+.transaction-history-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  grid-column: 1 / -1;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.transaction-header h2 {
+  color: #333;
+  font-size: 24px;
+  margin: 0;
+}
+
+.refresh-button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.refresh-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-message,
+.no-transactions {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+}
+
+.transactions-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background: #f9f9f9;
+  transition: background-color 0.2s;
+}
+
+.transaction-item:hover {
+  background: #f0f0f0;
+}
+
+.transaction-item.sent {
+  border-left-color: #dc3545;
+}
+
+.transaction-item.received {
+  border-left-color: #28a745;
+}
+
+.transaction-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.transaction-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.transaction-icon.sent {
+  background: #fee;
+  color: #dc3545;
+}
+
+.transaction-icon.received {
+  background: #efe;
+  color: #28a745;
+}
+
+.transaction-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.transaction-amount {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.transaction-amount.sent {
+  color: #dc3545;
+}
+
+.transaction-amount.received {
+  color: #28a745;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border-left: 4px solid #c33;
+}
