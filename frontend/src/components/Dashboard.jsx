@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { logout, getBalance, transferMoney, getUserInfo } from '../services/auth'
 import TransactionHistory from './TransactionHistory'
+import Chatbot from './Chatbot'
 import './Dashboard.css'
 
 const Dashboard = ({ setIsAuthenticated }) => {
@@ -189,6 +190,9 @@ const Dashboard = ({ setIsAuthenticated }) => {
 
         <TransactionHistory key={refreshTransactions} />
       </div>
+
+      {/* Floating AI Chatbot */}
+      <Chatbot />
     </div>
   )
 }
