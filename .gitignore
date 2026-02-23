@@ -17,3 +17,5 @@ Thumbs.db
 
 # VSCode (optional – remove if you want to share settings)
 .vscode/
+.vercel
+.env*.local
